@@ -7,9 +7,7 @@ class FoursquareService
       req.params['redirect_uri'] = "http://localhost:3000/auth"
       req.params['code'] = code
     end
-
     body = JSON.parse(resp.body)
-    session[:token] = body["access_token"]
-    redirect_to root_path
+    body["access_token"]
   end
 end
